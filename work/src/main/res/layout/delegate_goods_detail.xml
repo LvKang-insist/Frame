@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--可折叠式标题栏 ，不能独立存在，只能作为 AppBarLayout 的直接子布局来使用-->
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:statusBarScrim="@android:color/transparent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.bigkoo.convenientbanner.ConvenientBanner
+                        android:id="@+id/detail_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+
+                    <com.google.android.material.circularreveal.CircularRevealFrameLayout
+                        android:id="@+id/frame_goods_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/detail_banner" />
+                </RelativeLayout>
+
+                <!--Toolbar 要放在下面-->
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/goods_detail_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    app:layout_collapseMode="pin">
+                    <!-- pin 会跟着我们的滑动而折叠-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.joanzapata.iconify.widget.IconTextView
+                            android:id="@+id/icon_goods_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="12dp"
+                            android:gravity="center"
+                            android:text="{fa-chevron-left}"
+                            android:textColor="@android:color/black"
+                            android:textSize="26sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_detail_title_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="商品详情"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp" />
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <!--如果将TabLayout 写在这里，将会透明-->
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <!--@string/appbar_scrolling_view_behavior
+            通过反射进行加载的
+            ScrollingViewBehavior ——-静态 内部类
+            他已经把相应的滑动，阻尼这些动作都已经帮我们做好了-->
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <include layout="@layout/layout_goods_detall_bottom" />
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <com.google.android.material.circularreveal.CircularRevealFrameLayout
+        android:id="@+id/bottom_bar_delegate_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_bar"
+        android:background="@color/app_background"/>
+
+       <androidx.appcompat.widget.LinearLayoutCompat
+           android:id="@+id/bottom_bar"
+           android:layout_width="match_parent"
+           android:layout_height="60dp"
+           android:layout_alignParentBottom="true"
+           android:orientation="horizontal"/>
+  <!--  <com.admin.core.ui.view.MyLinear
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_background"
+        android:orientation="horizontal" />-->
+</RelativeLayout>

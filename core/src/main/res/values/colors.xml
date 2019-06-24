@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--浅灰色-->
+    <color name="app_background">#1111</color>
+    <!--微信黑-->
+    <color name="we_char_black">#323232</color>
+    <!--item 的日常颜色-->
+    <color name="item_background">#F1F1F1</color>
+    <!--橘黄色-->
+    <color name="app_main">@android:color/holo_orange_dark</color>
+</resources>

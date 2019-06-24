@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginBottom="5dp"
+    android:background="@android:color/white"
+    android:orientation="horizontal">
+
+
+    <com.joanzapata.iconify.widget.IconTextView
+        android:id="@+id/icon_item_shop_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:text="{fa-check-circle}"
+        android:textColor="@android:color/darker_gray" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_item_shop_cart"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <!--商品信息-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        tools:ignore="RtlSymmetry">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_shop_cart_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/shop_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_shop_cart_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/shop_desc" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_shop_cart_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="2.0"
+            android:textColor="@color/app_main" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/icon_item_minus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="@string/minus"
+            android:textSize="24sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_shop_cart_count"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="1"
+            android:layout_marginBottom="2dp"
+            android:textSize="18sp"/>
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/icon_item_plus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="@string/plus"
+            android:textSize="24sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

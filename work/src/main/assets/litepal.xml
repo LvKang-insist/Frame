@@ -1,0 +1,9 @@
+<?xml version="0.1" encoding="utf-8"?>
+<litepal>
+    <dbname value="Frame"/>
+    <version value= "1"/>
+    <list>
+        <mapping class="com.admin.work.litepal.AccountTable"/>
+    </list>
+    <storge value="gpf/database"/>
+</litepal>
