@@ -32,7 +32,7 @@ public class ExampleActivity extends ProxyActivity implements
 
     @Override
     public LatteDelegate setRootDelegate() {
-        return new SignInDelegate();
+        return new EcBottomDelegate();
     }
 
     @Override

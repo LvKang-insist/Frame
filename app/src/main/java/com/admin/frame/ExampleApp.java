@@ -1,5 +1,6 @@
 package com.admin.frame;
 
+import android.annotation.SuppressLint;
 import android.app.Application;
 
 import com.admin.core.app.Latte;
@@ -18,6 +19,8 @@ import org.litepal.LitePal;
  * 描述: 继承自 Application ，用于进行初始化
  */
 public class ExampleApp extends Application {
+
+    @SuppressLint("HandlerLeak")
     @Override
     public void onCreate() {
         super.onCreate();
@@ -35,6 +38,10 @@ public class ExampleApp extends Application {
 
         initStetho();
     }
+
+    /**
+     *  查看数据库
+     */
     private void initStetho() {
         Stetho.initialize(
                 Stetho.newInitializerBuilder(this)

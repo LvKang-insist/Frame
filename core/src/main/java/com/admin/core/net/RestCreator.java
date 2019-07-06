@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 /**
@@ -50,7 +51,7 @@ public class RestCreator {
 //                .client(OkHttpHolder.OK_HTTP_CLIENT)
                 //依赖中引入的转换器
                 .addConverterFactory(ScalarsConverterFactory.create())
-//                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
     }
     /**
@@ -59,6 +60,8 @@ public class RestCreator {
     private static final class OkHttpHolder{
         private static final int TIME_OUT = 60;
         public static final OkHttpClient.Builder BUILDER = new OkHttpClient.Builder();
+
+
 
         private static final ArrayList<Interceptor> INTERCEPTORS = Latte.getConfiguration(ConfigType.INTERCEPTOR);
 

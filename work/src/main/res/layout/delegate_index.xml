@@ -50,5 +50,9 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.Toolbar>
+    <Button
+        android:id="@+id/index_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

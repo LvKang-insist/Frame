@@ -27,4 +27,5 @@ dependencies {
 
     //在浏览器中输入 chrome://inspect 找到需要调试的对象
     api 'com.facebook.stetho:stetho:1.5.0'
+    testImplementation 'junit:junit:4.12'
 }

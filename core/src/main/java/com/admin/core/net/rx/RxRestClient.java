@@ -94,8 +94,6 @@ public class RxRestClient {
         return observable;
     }
 
-
-
     public final Observable<String> get() {
         return request(HttpMethod.GET);
     }
